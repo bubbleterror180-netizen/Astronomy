@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Astronomy Research</title>
+    <link rel="stylesheet" href="contact us.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+
+<body>
+    <!-- navbar start -->
+    <nav class="nb">
+        <div class="nc">
+            <div class="nl">
+                <a href="#" class="nlogo">
+                    <i class="fas fa-star"></i>
+                    <span>Astronomy</span>
+                </a>
+            </div>
+
+            <ul class="nm" id="nmenu">
+                <li class="ni">
+                    <a href="index.html" class="nlink">Home</a>
+                </li>
+                <li class="ni ndd">
+                    <a href="#" class="nlink ndt">
+                        Discover <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="ndm">
+                        <li><a href="bigbangtheory.html">Big Bang Theory</a></li>
+                        <li><a href="evolutionofearth.html">Evolution of Earth</a></li>
+                        <li><a href="comets.html">Comets</a></li>
+                    </ul>
+                </li>
+                <li class="ni ndd">
+                    <a href="#" class="nlink ndt">
+                        Planet <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="ndm">
+                        <li><a href="atmosphere.html">Atmosphere</a></li>
+                        <li><a href="observatries.html">Observatries</a></li>
+                    </ul>
+                </li>
+                <li class="ni">
+                    <a href="contactus.html" class="nlink">Contact us</a>
+                </li>
+                <li class="ni">
+                    <a href="faqs.html" class="nlink">FAQs</a>
+                </li>
+            </ul>
+
+            <div class="ntoggle" id="ntoggle">
+                <span class="nbar"></span>
+                <span class="nbar"></span>
+                <span class="nbar"></span>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+    <!-- form start -->
+    <!-- Form -->
+    <main>
+
+
+        <!-- form start -->
+        <div class="contact-wrapper">
+            <div class="contact-container">
+                <div class="contact-form-section">
+                    <h2 class="contact-title">Get In Touch</h2>
+                    <form id="contactForm">
+                        <div class="contact-field">
+                            <input type="text" class="contact-input" id="name" placeholder="Your Name" required
+                                minlength="2" pattern="[A-Za-z\s]+" title="Please enter only letters and spaces">
+                            <i class="fas fa-user"></i>
+                            <div class="error-message" id="nameError">Name must be at least 2 characters and contain
+                                only letters and spaces</div>
+                        </div>
+                        <div class="contact-field">
+                            <input type="email" class="contact-input" id="email" placeholder="Your Email" required>
+                            <i class="fas fa-envelope"></i>
+                            <div class="error-message" id="emailError">Please enter a valid email address</div>
+                        </div>
+                        <div class="contact-field">
+                            <textarea class="contact-input contact-textarea" id="message" placeholder="Your Message"
+                                required minlength="10" maxlength="500"></textarea>
+                            <div class="error-message" id="messageError">Message must be at least 10 characters long
+                            </div>
+                        </div>
+                        <button type="submit" class="contact-button">Send Message</button>
+                        <div class="success-message" id="successMessage">
+                            <i class="fas fa-check-circle"></i> Message sent successfully! We'll get back to you soon.
+                        </div>
+                    </form>
+                </div>
+
+                <div class="contact-message-panel">
+                    <h1 class="contact-welcome-title">Welcome to the Stars!</h1>
+                    <p class="contact-welcome-text">
+                        We'd love to hear from you. Drop us a message and let's connect across the universe.
+                    </p>
+                    <div style="margin-top: 2rem;">
+                        <h3 style="color: #00ffff; margin-bottom: 1rem;">Contact Information</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Galaxy Way, Cosmos City</p>
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> contact@astronomy.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="map">
+            <div class="contact-map-placeholder">
+                <i class="fas fa-map-marked-alt" id="icon"></i>
+                <button id="bt1">Visit us</button>
+            </div>
+        </div>
+        <!-- form end -->
+    </main>
+    <!-- form end -->
+    <!-- footer start -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Cosmic Explorations</h3>
+                <p>Dedicated to bringing the wonders of the universe closer to you. Explore galaxies, nebulae, and
+                    cosmic phenomena through our resources and community.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Explore</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="bigbangtheory.html"><i class="fas fa-chevron-right"></i> Discover</a></li>
+                    <li><a href="observatries.html"><i class="fas fa-chevron-right"></i> Planet</a></li>
+                    <li><a href="contactus.html"><i class="fas fa-chevron-right"></i> Contact us</a></li>
+                    <li><a href="faqs.html"><i class="fas fa-chevron-right"></i> FAQs</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <div class="observatory-info">
+                    <div>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Stellar Way, Cosmos City</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-phone"></i>
+                        <span>+1 (555) 123-4567</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-envelope"></i>
+                        <span>info@cosmicexplorations.com</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-clock"></i>
+                        <span>Mon - Fri: 9:00 AM - 5:00 PM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 Cosmic Explorations. All rights reserved.</p>
+            <div class="footer-credits">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Site Map</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+</body>
+<script src="navbar.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="contact us.js"></script>
+
+</html>

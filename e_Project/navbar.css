@@ -1,0 +1,240 @@
+.nb {
+    background-color: #0f2647f2;
+    padding: 0 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.nc {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.nl {
+    display: flex;
+    align-items: center;
+}
+
+.nlogo {
+    color: #64ffda;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.nlogo:hover {
+    color: #52dbb6;
+}
+
+.nlogo i {
+    margin-right: 10px;
+    font-size: 1.8rem;
+}
+
+.nm {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.ni {
+    position: relative;
+    margin: 0 0.5rem;
+}
+
+.nlink {
+    color: #ccd6f6;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.nlink:hover {
+    color: #64ffda;
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+.ndt {
+    position: relative;
+}
+
+.ndt i {
+    margin-left: 5px;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.ndd:hover .ndt i {
+    transform: rotate(180deg);
+}
+
+.ndm {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(23, 42, 69, 0.95);
+    min-width: 200px;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    list-style: none;
+    padding: 0.5rem 0;
+    z-index: 1001;
+}
+
+.ndd:hover .ndm {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.ndm li {
+    margin: 0;
+}
+
+.ndm a {
+    color: #ccd6f6;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.ndm a:hover {
+    color: #64ffda;
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+.ntoggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.nbar {
+    width: 25px;
+    height: 3px;
+    background-color: #64ffda;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+@media screen and (max-width: 768px) {
+    .nm {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: rgba(10, 25, 47, 0.98);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.3);
+        padding: 2rem 0;
+        height: calc(100vh - 70px);
+        overflow-y: auto;
+    }
+
+    .nm.active {
+        left: 0;
+    }
+
+    .ni {
+        margin: 0.5rem 0;
+        width: 80%;
+    }
+
+    .nlink {
+        justify-content: center;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    .ndm {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background-color: rgba(23, 42, 69, 0.7);
+        width: 100%;
+        margin-top: 0.5rem;
+        display: none;
+        border-radius: 8px;
+        padding: 0.5rem 0;
+    }
+
+    .ndd.active .ndm {
+        display: block;
+        animation: slideDown 0.3s ease;
+    }
+
+    .ndt i {
+        transform: rotate(0deg);
+        transition: transform 0.3s ease;
+    }
+
+    .ndd.active .ndt i {
+        transform: rotate(180deg);
+    }
+
+    .ntoggle {
+        display: flex;
+    }
+
+    .ntoggle.active .nbar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .ntoggle.active .nbar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .ntoggle.active .nbar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nlogo span {
+        font-size: 1.2rem;
+    }
+
+    .nlogo i {
+        font-size: 1.5rem;
+    }
+}

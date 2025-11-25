@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle at top, #0f2647f2, #0f1c3a);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.con {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.con h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #64ffda;
+}
+
+.con p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ccd6f6;
+}
+
+.accordion-container {
+    background-color: linear-gradient(135deg, #0f2647f2, #0f1c3a);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid #2a2a6e;
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+.accordion {
+    border-bottom: 1px solid #2a2a6e;
+}
+
+.accordion:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    background: linear-gradient(90deg, #0f2647f2, #0f1c3a);
+    padding: 18px 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.accordion-header:hover {
+    background: linear-gradient(90deg, #64ffda, #0f2647f2);
+}
+
+.accordion-header h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #e0e0ff;
+    margin: 0;
+}
+
+.accordion-icon {
+    font-size: 1.5rem;
+    color: #64ffda;
+    transition: transform 0.3s ease;
+}
+
+.accordion-content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    background-color: #0f1c3a;
+}
+
+.accordion-content.active {
+    padding: 25px;
+    max-height: 1000px;
+}
+
+.accordion-content p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #c0c0ff;
+}
+
+.accordion-content p:last-child {
+    margin-bottom: 0;
+}
+
+.fact-box {
+    background: #0f2647f2;
+    border-left: 4px solid #8a8aff;
+    padding: 12px 15px;
+    margin: 15px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+@media (max-width: 600px) {
+    .accordion-header {
+        padding: 15px 20px;
+    }
+
+    .accordion-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .accordion-content.active {
+        padding: 20px;
+    }
+}
